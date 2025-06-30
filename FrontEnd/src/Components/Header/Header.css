@@ -140,6 +140,10 @@
     cursor: pointer;
 }
 
+.menuBtn{
+    display: none;
+}
+
 .notification-logo-box {
     position: relative;
 }
@@ -157,4 +161,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width : 426px){
+    .show{
+        display: inline;
+    }
 }

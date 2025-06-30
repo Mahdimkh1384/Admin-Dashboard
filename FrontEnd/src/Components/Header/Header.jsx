@@ -2,8 +2,9 @@ import "./Header.css"
 import { useEffect, useState } from "react"
 import { AiOutlineBell } from 'react-icons/ai'
 import { BsBrightnessHigh } from 'react-icons/bs'
-import { IoCloseCircleOutline } from "react-icons/io5";
+import { IoCloseCircleOutline , IoMenu } from "react-icons/io5";
 import DetailsModal from "../DetailsModal/DetailsModal"
+import SideBar from "../SideBar/SideBar";
 
 
 export default function Header() {
@@ -13,6 +14,7 @@ export default function Header() {
     const [isShowSearchResult, setIsShowSearchResult] = useState(false)
     const [allProductData, setAllProductData] = useState([])
     const [searchedData, setSearchedData] = useState([])
+    const [isShowMenuForPhone , setIsShowMenuForPhone] = useState(false)
 
     const getAllProductsData = () => {
         fetch("http://localhost:8000/api/products")
@@ -75,11 +77,16 @@ export default function Header() {
         }
     }
 
+    const showMenuHandler = () =>{
+        setIsShowMenuForPhone(prev => !prev)
+    }
 
     return (
         <>
             <div className="header">
                 <div className='admin-profile'>
+                    <button className="header-left-icon menuBtn show" onClick={showMenuHandler}><IoMenu /></button>
+                    {isShowMenuForPhone && <SideBar/>}
                     <img src="img/userIcon.png" alt="Admin" />
                     <div>
                         <h1>مهدی مرامی</h1>
