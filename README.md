@@ -19,4 +19,6 @@
 
 # preview 👁️‍🗨️
 
-<img src = "Pictures\Screenshots\Screenshot 2025-06-30 112945.png" />
+<img width="400px" src="https://github.com/Mahdimkh1384/Admin-Dashboard/blob/master/FrontEnd/Screenshot/Screenshot%202025-06-30%20112945.png?raw=true" /> <img width="400px" src="https://github.com/Mahdimkh1384/Admin-Dashboard/blob/master/FrontEnd/Screenshot/Screenshot%202025-06-30%20112958.png?raw=true" />
+<img width="400px" src="https://github.com/Mahdimkh1384/Admin-Dashboard/blob/master/FrontEnd/Screenshot/Screenshot%202025-06-30%20113018.png?raw=true" />
+<img width="400px" src="https://github.com/Mahdimkh1384/Admin-Dashboard/blob/master/FrontEnd/Screenshot/Screenshot%202025-06-30%20113030.png?raw=true" />
