@@ -1,7 +1,7 @@
 # Description ✔️
 
 
-🔷 This complete project has a database and backend that is not yet responsive.
+🔷 This complete project has a database and backend that is not yet responsive. 👌
 
 
 # Advantages and disadvantages ✅❌
