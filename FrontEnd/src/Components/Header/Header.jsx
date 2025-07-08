@@ -17,7 +17,7 @@ export default function Header() {
     const [isShowMenuForPhone , setIsShowMenuForPhone] = useState(false)
 
     const getAllProductsData = () => {
-        fetch("http://localhost:8000/api/products")
+        fetch("http://backend.mahdi-dev.ir/api/products")
             .then(res => res.json())
             .then(result => setAllProductData(result))
     }
@@ -85,8 +85,8 @@ export default function Header() {
         <>
             <div className="header">
                 <div className='admin-profile'>
-                    <button className="header-left-icon menuBtn show" onClick={showMenuHandler}><IoMenu /></button>
-                    {isShowMenuForPhone && <SideBar/>}
+                    <button className="header-left-icon menuBtn " onClick={showMenuHandler}><IoMenu /></button>
+                    {isShowMenuForPhone && <SideBar />}
                     <img src="img/userIcon.png" alt="Admin" />
                     <div>
                         <h1>مهدی مرامی</h1>

@@ -10,7 +10,7 @@ export default function Products() {
     const [allProducts, setAllProducts] = useState([])
 
         const getAllProducts = () => {
-        fetch("http://localhost:8000/api/products/")
+        fetch("http://backend.mahdi-dev.ir/api/products/")
             .then(res => res.json())
             .then(data => setAllProducts(data.reverse()))
     }

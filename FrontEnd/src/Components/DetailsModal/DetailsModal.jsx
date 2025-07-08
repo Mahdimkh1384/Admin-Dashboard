@@ -2,7 +2,7 @@ import React from 'react'
 import "./DetailsModal.css"
 import { useEffect } from 'react'
 
-export default function DetailsModal({ onHide , children}) {
+export default function DetailsModal({ onHide, children }) {
 
     useEffect(() => {
         const checkKey = (event) => {
@@ -21,6 +21,7 @@ export default function DetailsModal({ onHide , children}) {
         <div className=' modal-parent active'>
             <div className='details-Modal'>
                 {children}
+                <button className='text-modal-close-btn' onClick={()=> onHide()}>بستن</button>
             </div>
         </div>
     )

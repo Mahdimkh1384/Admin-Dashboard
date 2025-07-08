@@ -17,7 +17,7 @@ export default function Comments() {
 
 
     const getAllCommentData = () => {
-        fetch("http://localhost:8000/api/comments")
+        fetch("http://backend.mahdi-dev.ir/api/comments")
             .then((res) => res.json())
             .then((comments) => setAllComments(comments));
     }
@@ -31,7 +31,7 @@ export default function Comments() {
     }
 
     const deleteModalSubmitAction = () => {
-        fetch(`http://localhost:8000/api/comments/${mainCommentID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
             method: "DELETE",
         })
             .then(res => res.json())
@@ -50,7 +50,7 @@ export default function Comments() {
     const updateProductInfo = (event) => {
         event.preventDefault()
 
-        fetch(`http://localhost:8000/api/comments/${mainCommentID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +71,7 @@ export default function Comments() {
     }
 
     const acceptComment = () => {
-        fetch(`http://localhost:8000/api/comments/accept/${mainCommentID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/comments/accept/${mainCommentID}`, {
             method: "POST",
         })
             .then(res => res.json())
@@ -86,7 +86,7 @@ export default function Comments() {
     }
 
     const RejectComment = () => {
-        fetch(`http://localhost:8000/api/comments/reject/${mainCommentID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/comments/reject/${mainCommentID}`, {
             method: "POST"
         })
             .then(res => res.json())
@@ -166,7 +166,6 @@ export default function Comments() {
                 <p className="text-modal">
                     {mainCommentBody}
                 </p>
-                <button className="text-modal-close-btn" onClick={cancelDetailsModal}>بستن</button>
             </DetailsModal>}
             {isShowDeleteModal && <DeleteModal title={"آیا از حذف اطمینان دارید ؟"} cancelAction={deleteModalCancelAction} submit={deleteModalSubmitAction} />}
             {isShowEditModal && <EditModal onClose={() => setIsShowEditModal(false)} onSubmit={(event) => updateProductInfo(event)}>

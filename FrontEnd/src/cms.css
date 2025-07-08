@@ -56,15 +56,3 @@
     margin-inline: 5px;
     cursor: pointer;
 }
-
-@media(max-width : 426px){
-    .cms-table button {
-        margin-bottom: 10px;
-    }
-
-    .modal-parent{
-        top: 50%;
-        left: 113%;
-        height: 100%;
-    }
-}

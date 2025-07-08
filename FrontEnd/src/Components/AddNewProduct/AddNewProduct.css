@@ -20,7 +20,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 15px;
+    gap: 15px 15px;
 }
 
 .add-products-form-group {
@@ -42,7 +42,7 @@
     width: 100%;
 }
 
-.add-products-submit{
+.add-products-submit {
     background-color: var(--blue);
     color: var(--white);
     margin-top: 10px;
@@ -51,4 +51,21 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+@media(max-width: 426px) {
+    .products-main {
+        width: 350px;
+        margin-top: 110px;
+        margin-right: 15px;
+    }
+    .add-products-form-group {
+        padding: 0 10px;
+    }
+    .add-products-input{
+        padding: 5px 10px;
+    }
+    .add-products-input::placeholder{
+        font-size:x-small;
+    }
 }

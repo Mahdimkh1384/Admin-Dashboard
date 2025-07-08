@@ -35,7 +35,7 @@ export default function AddNewProduct({ getAllProducts }) {
             colors: newProductColors
         }
 
-        fetch("http://localhost:8000/api/products/", {
+        fetch("http://backend.mahdi-dev.ir/api/products/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

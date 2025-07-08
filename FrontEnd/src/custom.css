@@ -22,12 +22,3 @@ body {
 * , body , html {
     font-family: Lalezar;
 }
-
-@media(max-width : 426px){
-    body{
-        position: absolute;
-        display: flex;
-        flex: 1;
-        justify-content: end;
-    }
-}

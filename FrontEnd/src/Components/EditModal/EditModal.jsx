@@ -22,6 +22,7 @@ export default function EditModal({ children, onClose, onSubmit }) {
 
                 {children}
                 <button className='edit-form-submit' onClick={onSubmit}>ثبت اطلاعات جدید</button>
+                <button className='text-modal-close-btn' onClick={() => onClose()}>بستن</button>
             </form>
         </div>
     )

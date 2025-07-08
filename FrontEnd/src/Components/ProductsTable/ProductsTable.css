@@ -37,7 +37,7 @@
     object-fit: cover;
 }
 
-.products-table-btn{
+.products-table-btn {
     padding: 8px 20px;
     font-size: 1.1rem;
     border: none;
@@ -50,7 +50,7 @@
 
 /* Start Edit Modal Childs Style*/
 
-.edit-products-form-group{
+.edit-products-form-group {
     margin-top: 15px;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     border-radius: 10px;
 }
 
-.edit-product-input{
+.edit-product-input {
     outline: none;
     border: none;
     background-color: unset;
@@ -69,4 +69,34 @@
     width: 100%;
     padding: 8px 10px;
 }
+
 /* Finish Edit Modal Childs Style*/
+
+@media(max-width: 426px) {
+    .products-table-img {
+        width: 70px;
+    }
+
+    .products-table-heading-tr {
+        padding: 0 40px 0 50px;
+    }
+
+    .products-table td {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    .products-table-tr{
+        position: relative;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .btns-container{
+        position: absolute;
+        top: 78px;
+        right: 22px;
+    }
+    .products-table-btn{
+        padding: 6px 15px;
+        font-size: .9rem;
+    }
+}

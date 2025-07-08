@@ -37,7 +37,7 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
     }
 
     const deleteModalSubmitAction = () => {
-        fetch(`http://localhost:8000/api/products/${productID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/products/${productID}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -65,7 +65,7 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
             sale: productNewSale,
             colors: productNewColors
         }
-        fetch(`http://localhost:8000/api/products/${productID}`, {
+        fetch(`http://backend.mahdi-dev.ir/api/products/${productID}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -102,7 +102,7 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
                             <td>{product.title}</td>
                             <td>{product.price.toLocaleString("en-US")}  تومان </td>
                             <td>{product.count}</td>
-                            <td>
+                            <td className='btns-container'>
                                 <button className='products-table-btn' onClick={() => {
                                     setIsShowDetailsModal(true)
                                     setMoreProductsData(product)
