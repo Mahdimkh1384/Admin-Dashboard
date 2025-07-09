@@ -56,3 +56,31 @@
     margin-inline: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 426px) {
+    .cms-main {
+        padding: 10px;
+        margin-top: 80px;
+        border-radius: 15px;
+    }
+
+    .cms-table {
+        font-size: 0.85rem;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .cms-table th, .cms-table td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+
+    .cms-table button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        margin-block: 5px;
+        display: block;
+        width: 100%;
+    }
+}

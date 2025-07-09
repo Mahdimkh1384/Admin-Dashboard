@@ -114,7 +114,7 @@ export default function Comments() {
 
                         <tbody>
                             {allComments.map((comment) => (
-                                <tr key={comment.id}>
+                                <tr key={comment.id} >
                                     <td>{comment.userID}</td>
                                     <td>{comment.productID}</td>
                                     <td>
