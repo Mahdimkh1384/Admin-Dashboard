@@ -11,7 +11,7 @@ export default function Products() {
     const [isLoading, setIsLoading] = useState(true)
 
     const getAllProducts = () => {
-        fetch("http://backend.mahdi-dev.ir/api/products/")
+        fetch("https://backend.mahdi-dev.ir/api/products/")
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data.reverse())

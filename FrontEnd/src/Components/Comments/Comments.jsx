@@ -20,9 +20,9 @@ export default function Comments() {
 
 
     const getAllCommentData = () => {
-        fetch("http://backend.mahdi-dev.ir/api/comments")
+        fetch("https://backend.mahdi-dev.ir/api/comments")
             .then((res) => res.json())
-            .then((comments) => {
+            .then(comments => {                
                 setAllComments(comments)
                 setIsLoading(false)
             });
@@ -37,7 +37,7 @@ export default function Comments() {
     }
 
     const deleteModalSubmitAction = () => {
-        fetch(`http://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
             method: "DELETE",
         })
             .then(res => res.json())
@@ -56,7 +56,7 @@ export default function Comments() {
     const updateProductInfo = (event) => {
         event.preventDefault()
 
-        fetch(`http://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/comments/${mainCommentID}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -77,7 +77,7 @@ export default function Comments() {
     }
 
     const acceptComment = () => {
-        fetch(`http://backend.mahdi-dev.ir/api/comments/accept/${mainCommentID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/comments/accept/${mainCommentID}`, {
             method: "POST",
         })
             .then(res => res.json())
@@ -92,7 +92,7 @@ export default function Comments() {
     }
 
     const RejectComment = () => {
-        fetch(`http://backend.mahdi-dev.ir/api/comments/reject/${mainCommentID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/comments/reject/${mainCommentID}`, {
             method: "POST"
         })
             .then(res => res.json())

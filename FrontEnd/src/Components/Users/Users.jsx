@@ -38,7 +38,7 @@ export default function Users() {
 
 
     const getAllUsersData = () => {
-        fetch("http://backend.mahdi-dev.ir/api/users/")
+        fetch("https://backend.mahdi-dev.ir/api/users/")
             .then(res => res.json())
             .then(result => {
                 setAllUsers(result)
@@ -56,7 +56,7 @@ export default function Users() {
 
     const deleteModalSubmitAction = () => {
 
-        fetch(`http://backend.mahdi-dev.ir/api/users/${mainUserID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/users/${mainUserID}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -86,7 +86,7 @@ export default function Users() {
             buy: newBuy
         }
 
-        fetch(`http://backend.mahdi-dev.ir/api/users/${mainUserID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/users/${mainUserID}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

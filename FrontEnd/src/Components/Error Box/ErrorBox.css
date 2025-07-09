@@ -6,3 +6,9 @@
     color: var(--white);
     text-align: center;
 }
+
+@media(max-width : 426px){
+    .cms-empty-error{
+        margin-right: 5px;
+    }
+}

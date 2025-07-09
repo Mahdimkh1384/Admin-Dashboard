@@ -18,7 +18,7 @@ export default function Header() {
     const [isShowMenuForPhone , setIsShowMenuForPhone] = useState(false)
 
     const getAllProductsData = () => {
-        fetch("http://backend.mahdi-dev.ir/api/products")
+        fetch("https://backend.mahdi-dev.ir/api/products")
             .then(res => res.json())
             .then(result => setAllProductData(result))
     }

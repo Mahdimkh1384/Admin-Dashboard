@@ -37,7 +37,7 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
     }
 
     const deleteModalSubmitAction = () => {
-        fetch(`http://backend.mahdi-dev.ir/api/products/${productID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/products/${productID}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -65,7 +65,7 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
             sale: productNewSale,
             colors: productNewColors
         }
-        fetch(`http://backend.mahdi-dev.ir/api/products/${productID}`, {
+        fetch(`https://backend.mahdi-dev.ir/api/products/${productID}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
