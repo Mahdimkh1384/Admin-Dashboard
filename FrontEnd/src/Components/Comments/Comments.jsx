@@ -4,6 +4,7 @@ import DetailsModal from "../DetailsModal/DetailsModal";
 import DeleteModal from "../DeleteModal/DeleteModal";
 import EditModal from "../EditModal/EditModal";
 import "./Comments.css"
+import Loading from "../Loading/Loading";
 
 export default function Comments() {
     const [allComments, setAllComments] = useState([]);
@@ -15,11 +16,16 @@ export default function Comments() {
     const [mainCommentBody, setMainCommentBody] = useState(null)
     const [mainCommentID, setMainCommentID] = useState(null)
 
+    const [isLoading , setIsLoading] = useState(true)
+
 
     const getAllCommentData = () => {
         fetch("http://backend.mahdi-dev.ir/api/comments")
             .then((res) => res.json())
-            .then((comments) => setAllComments(comments));
+            .then((comments) => {
+                setAllComments(comments)
+                setIsLoading(false)
+            });
     }
 
     useEffect(() => {
@@ -161,6 +167,7 @@ export default function Comments() {
                 ) : (
                     <ErrorBox msg="هیچ کامنتی یافت نشد" />
                 )}
+                {isLoading && <Loading/>}
             </div>
             {isShowDetailsModal && <DetailsModal onHide={cancelDetailsModal}>
                 <p className="text-modal">

@@ -5,6 +5,7 @@ import { BsBrightnessHigh } from 'react-icons/bs'
 import { IoCloseCircleOutline , IoMenu } from "react-icons/io5";
 import DetailsModal from "../DetailsModal/DetailsModal"
 import SideBar from "../SideBar/SideBar";
+import Loading from "../Loading/Loading";
 
 
 export default function Header() {

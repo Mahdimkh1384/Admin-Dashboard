@@ -5,12 +5,12 @@ import DeleteModal from '../DeleteModal/DeleteModal'
 import DetailsModal from '../DetailsModal/DetailsModal'
 import EditModal from '../EditModal/EditModal'
 import { AiOutlineDollarCircle } from 'react-icons/ai';
-import { MdOutlineEmail , MdOutlineLocalPhone , MdOutlineVerifiedUser } from "react-icons/md";
+import { MdOutlineEmail, MdOutlineLocalPhone, MdOutlineVerifiedUser } from "react-icons/md";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { PiCity } from "react-icons/pi";
 import { GrScorecard } from "react-icons/gr";
-
+import Loading from '../Loading/Loading'
 
 
 
@@ -34,12 +34,15 @@ export default function Users() {
     const [newScore, setNewScore] = useState('')
     const [newBuy, setNewBuy] = useState('')
 
+    const [isLoading, setIsLoading] = useState(true)
+
 
     const getAllUsersData = () => {
         fetch("http://backend.mahdi-dev.ir/api/users/")
             .then(res => res.json())
             .then(result => {
                 setAllUsers(result)
+                setIsLoading(false)
             })
     }
 
@@ -161,6 +164,7 @@ export default function Users() {
                         </tbody>
                     </table>
                 ) : (<ErrorBox msg="هیچ کاربری یافت نشد" />)}
+                {isLoading && <Loading/>}
             </div>
             {isShowDeleteModal && <DeleteModal title={"آیا از حذف اطمینان دارید؟"} cancelAction={deleteModalCancelAction} submit={deleteModalSubmitAction} />}
             {isShowEditModal && <EditModal onClose={closeEditModal} onSubmit={updateUser}>
@@ -188,7 +192,7 @@ export default function Users() {
                 </div>
                 <div className="edit-user-info-input-group">
                     <span>
-                        <MdOutlineVerifiedUser  />
+                        <MdOutlineVerifiedUser />
                     </span>
                     <input type="text"
                         className="edit-user-info-input"
@@ -210,7 +214,7 @@ export default function Users() {
                 </div>
                 <div className="edit-user-info-input-group">
                     <span>
-                        <MdOutlineLocalPhone   />
+                        <MdOutlineLocalPhone />
                     </span>
                     <input type="text"
                         className="edit-user-info-input"
