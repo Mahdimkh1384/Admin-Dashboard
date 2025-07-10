@@ -130,7 +130,6 @@ export default function Header() {
             </div>
             {isShowDetailModal && <DetailsModal onHide={cancelDetailModal}>
                 <h1 style={{ color: "red", fontSize: "xx-large" }}>هیچ اعلانی وجود ندارد</h1>
-                <button className="text-modal-close-btn" onClick={() => setIsShowDetailModal(false)}> بستن</button>
             </DetailsModal>}
         </>
     )
