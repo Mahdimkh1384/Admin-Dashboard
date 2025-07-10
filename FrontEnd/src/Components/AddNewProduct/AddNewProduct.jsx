@@ -35,7 +35,7 @@ export default function AddNewProduct({ getAllProducts }) {
             colors: newProductColors
         }
 
-        fetch("http://backend.mahdi-dev.ir/api/products/", {
+        fetch("https://backend.mahdi-dev.ir/api/products/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -67,6 +67,7 @@ export default function AddNewProduct({ getAllProducts }) {
                         <input type="text"
                             placeholder='قیمت محصول را بنویسید'
                             className='add-products-input'
+                            inputMode='numeric'
                             value={newProductPrice}
                             onChange={(e) => setNewProductPrice(e.target.value)}
                         />
@@ -75,6 +76,7 @@ export default function AddNewProduct({ getAllProducts }) {
                         <input type="text"
                             placeholder='موجودی محصول را بنویسید'
                             className='add-products-input'
+                            inputMode='numeric'
                             value={newProductCount}
                             onChange={(e) => setNewProductCount(e.target.value)}
                         />
@@ -91,6 +93,7 @@ export default function AddNewProduct({ getAllProducts }) {
                         <input type="text"
                             placeholder='میزان محبوبیت محصول را بنویسید'
                             className='add-products-input'
+                            inputMode='numeric'
                             value={newProductPopularity}
                             onChange={(e) => setNewProductPopularity(e.target.value)}
                         />
@@ -99,6 +102,7 @@ export default function AddNewProduct({ getAllProducts }) {
                         <input type="text"
                             placeholder='میزان فروش محصول را بنویسید'
                             className='add-products-input'
+                            inputMode='numeric'
                             value={newProductSale}
                             onChange={(e) => setNewProductSale(e.target.value)}
                         />
@@ -107,6 +111,7 @@ export default function AddNewProduct({ getAllProducts }) {
                         <input type="text"
                             placeholder='تعداد رنگ بندی محصول را بنویسید'
                             className='add-products-input'
+                            inputMode='numeric'
                             value={newProductColors}
                             onChange={(e) => setNewProductColors(e.target.value)}
                         />
