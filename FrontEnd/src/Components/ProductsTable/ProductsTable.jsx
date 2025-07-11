@@ -3,14 +3,14 @@ import "./ProductsTable.css";
 import DeleteModal from '../DeleteModal/DeleteModal';
 import DetailsModal from '../DetailsModal/DetailsModal';
 import EditModal from '../EditModal/EditModal';
-import { AiOutlineDollarCircle , AiFillPicture } from 'react-icons/ai';
+import { AiOutlineDollarCircle, AiFillPicture } from 'react-icons/ai';
 import ErrorBox from '../Error Box/ErrorBox';
-import { MdOutlineSubtitles , MdOutlinePointOfSale } from "react-icons/md";
-import { TbListNumbers , TbChartBarPopular } from "react-icons/tb";
+import { MdOutlineSubtitles, MdOutlinePointOfSale } from "react-icons/md";
+import { TbListNumbers, TbChartBarPopular } from "react-icons/tb";
 import { IoIosColorPalette } from "react-icons/io";
 import Loading from '../Loading/Loading';
 
-export default function ProductsTable({allProducts , getAllProducts, setAllProducts , isLoading}) {
+export default function ProductsTable({ allProducts, getAllProducts, setAllProducts, isLoading }) {
 
     const [isShowDeleteModal, setIsShowDeleteModal] = useState(false)
     const [isShowDetailsModal, setIsShowDetailsModal] = useState(false)
@@ -134,8 +134,8 @@ export default function ProductsTable({allProducts , getAllProducts, setAllProdu
                 </tbody>
             </table>)
                 : (<ErrorBox msg="هیچ محصولی یافت نشد" />)}
-                {isLoading && <Loading/>}
-                
+            {isLoading && <Loading />}
+
 
             {isShowDeleteModal && <DeleteModal title={"آیا از حذف اطمینان دارید ؟"} cancelAction={deleteModalCancelAction} submit={deleteModalSubmitAction} />}
             {isShowDetailsModal && <DetailsModal onHide={cancelDetailsModal} >

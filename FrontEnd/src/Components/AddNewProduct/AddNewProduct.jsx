@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./AddNewProduct.css"
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function AddNewProduct({ getAllProducts }) {
 
@@ -35,23 +36,58 @@ export default function AddNewProduct({ getAllProducts }) {
             colors: newProductColors
         }
 
-        fetch("https://backend.mahdi-dev.ir/api/products/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newProductInformation)
-        })
-            .then(res => res.json())
-            .then(result => {
-                getAllProducts()
-                clearInputsValue()
+        if (newProductTitle && newProductPrice && newProductCount && newProductImg && newProductPopularity && newProductSale && newProductColors) {
+            fetch("https://backend.mahdi-dev.ir/api/products/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newProductInformation)
             })
+                .then(res => res.json())
+                .then(result => {
+                    getAllProducts()
+                    clearInputsValue()
+                    toast.success("محصول با موفقیت اضافه شد", {
+                        position: "top-left",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                    })
+                })
+        } else {
+            toast.error("لطفا تمامی مقادیر را وارد کنید", {
+                position: "top-left",
+                autoClose: 4000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            })
+        }
     }
 
 
     return (
         <div className='products-main'>
+            <ToastContainer
+                position="top-left"
+                autoClose={4000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
             <h1 className='products-title'>افزودن محصول جدید</h1>
             <form action="#" className='add-products-form'>
                 <div className="add-product-form-wrap">

@@ -4,17 +4,17 @@ import ErrorBox from '../Error Box/ErrorBox'
 
 export default function Orders() {
 
-    const [allOrders , setAllOrders] = useState([])
+    // const [allOrders , setAllOrders] = useState([])
 
-    const getAllOrders = () => {
-        fetch("http://localhost:8000/api/orders/")
-            .then(res => res.json())
-            .then(orders => setAllOrders(orders))
-    }
+    // const getAllOrders = () => {
+    //     fetch("http://localhost:8000/api/orders/")
+    //         .then(res => res.json())
+    //         .then(orders => setAllOrders(orders))
+    // }
 
-    useEffect(()=> {
-        getAllOrders()
-    } , [])
+    // useEffect(()=> {
+    //     getAllOrders()
+    // } , [])
 
     return (
         <>

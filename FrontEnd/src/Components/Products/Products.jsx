@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "./Products.css"
-import ErrorBox from '../Error Box/ErrorBox'
 import AddNewProduct from '../AddNewProduct/AddNewProduct'
 import ProductsTable from '../ProductsTable/ProductsTable'
 

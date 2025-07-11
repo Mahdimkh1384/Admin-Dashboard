@@ -83,4 +83,7 @@
         display: block;
         width: 100%;
     }
+    .modal-parent{
+        padding-right: 15px;
+    }
 }
