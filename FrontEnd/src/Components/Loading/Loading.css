@@ -4,32 +4,28 @@
     align-items: center;
     justify-content: center;
     height: 30vh;
-    background-color: #f9f9f9;
-    margin-top: 10px;
+    background-color: var(--surface);
+    border-radius: 16px;
+    margin-top: 16px;
+    border: 1px solid var(--border);
 }
 
 .loading-spinner {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #e0e0e0;
-    border-top: 6px solid #3498db;
+    width: 52px;
+    height: 52px;
+    border: 5px solid var(--border);
+    border-top: 5px solid var(--blue);
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 0.9s linear infinite;
 }
 
 .loading-text {
     margin-top: 16px;
-    font-size: 1.2rem;
-    color: #555;
-    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--text-muted);
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

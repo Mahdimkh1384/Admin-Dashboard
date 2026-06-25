@@ -1,14 +1,14 @@
-.cms-empty-error{
-    font-size: 2rem;
-    background-color: #ff4f4f;
+.cms-empty-error {
+    font-size: 1.6rem;
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border: 1px solid var(--danger-text);
     margin-top: 20px;
-    padding: 20px;
-    color: var(--white);
+    padding: 24px 20px;
+    border-radius: 12px;
     text-align: center;
 }
 
-@media(max-width : 426px){
-    .cms-empty-error{
-        margin-right: 5px;
-    }
+@media(max-width: 426px) {
+    .cms-empty-error { margin-right: 5px; }
 }

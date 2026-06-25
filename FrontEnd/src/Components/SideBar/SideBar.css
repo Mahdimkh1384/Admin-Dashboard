@@ -3,64 +3,61 @@
     background-color: var(--blue);
     height: 100vh;
     flex: 1;
+    transition: background-color 0.3s;
 }
 
 .close-sidebar-menu-icon {
     font-size: large;
-    background-color: rgb(255, 60, 60);
-    color: var(--white);
+    background-color: rgb(220, 50, 50);
+    color: #fff;
     border: none;
+    cursor: pointer;
+    font-family: Lalezar;
+    padding: 6px 14px;
 }
 
-.showCloseBtn {
-    display: none;
-}
+.showCloseBtn { display: none; }
 
 .sidebar-title {
-    font-size: 1.4rem;
-    color: var(--white);
-    padding: 15px;
+    font-size: 1.35rem;
+    color: rgba(255,255,255,0.95);
+    padding: 16px;
     text-align: right;
-    border-bottom: 2px solid #6c48bb;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
-.sidebar-links {
-    margin-top: 20px;
-}
+.sidebar-links { margin-top: 16px; }
 
 .sidebar-links a {
     position: relative;
-    padding: 15px;
-}
-
-.sidebar-links a {
     width: 87%;
-    color: var(--white);
+    padding: 14px 16px;
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
     display: flex;
     justify-content: right;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 4px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .sidebar-links a:hover {
-    background-color: #391588;
-    color: var(--white);
-}
-
-.icon {
-    margin-left: 8px;
+    background-color: rgba(255,255,255,0.12);
+    color: #fff;
 }
 
 .sidebar-links a.active {
-    background-color: #391588;
+    background-color: rgba(255,255,255,0.18);
+    color: #fff;
 }
 
-.sidebar-links a:first-child {
-    margin-bottom: 20px;
-}
+.sidebar-links a:first-child { margin-bottom: 16px; }
 
-@media(max-width : 426px) {
+.icon { margin-left: 10px; }
+
+@media(max-width: 426px) {
     .sidebar {
         display: none;
         position: absolute;
@@ -70,15 +67,7 @@
         z-index: 999;
     }
 
-    .sidebar-links a {
-        width: 82%;
-    }
-
-    .sidebar-title {
-        padding: 10px;
-    }
-
-    .showCloseBtn {
-        display: inline;
-    }
+    .sidebar-links a { width: 82%; }
+    .sidebar-title { padding: 10px; }
+    .showCloseBtn { display: inline; }
 }

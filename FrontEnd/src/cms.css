@@ -1,22 +1,21 @@
-.modal-parent{
+.modal-parent {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.65);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     visibility: hidden;
     transition: .4s;
-    overflow: scroll;
 }
 
-.modal-parent.active{
+.modal-parent.active {
     opacity: 1;
     visibility: visible;
 }
@@ -27,34 +26,71 @@
     border-radius: 25px;
 }
 
-.cms-title{
+.cms-title {
     font-weight: bold;
     font-size: 2rem;
+    color: var(--text-primary);
 }
 
-.cms-table{
+.cms-table {
     margin-top: 20px;
     width: 100%;
-    border-radius: 10px;
-    background-color: var(--white);
+    border-radius: 12px;
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: background-color 0.3s;
 }
 
-.cms-table tr{
+.cms-table thead {
+    background-color: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+}
+
+.cms-table tr {
     text-align: center;
 }
 
-.cms-table th , .cms-table td{
-    padding: 20px;
+.cms-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background-color 0.15s;
+}
+
+.cms-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.cms-table tbody tr:hover {
+    background-color: var(--surface-2);
+}
+
+.cms-table th {
+    padding: 16px 20px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.cms-table td {
+    padding: 16px 20px;
+    color: var(--text-primary);
 }
 
 .cms-table button {
     background-color: var(--blue);
-    color: var(--white);
-    padding: 8px 15px;
-    border-radius: 10px;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
     border: none;
-    margin-inline: 5px;
+    margin-inline: 4px;
     cursor: pointer;
+    font-family: Lalezar;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.cms-table button:hover {
+    opacity: 0.85;
 }
 
 @media (max-width: 426px) {
@@ -78,12 +114,11 @@
     .cms-table button {
         padding: 6px 10px;
         font-size: 0.8rem;
-        border-radius: 8px;
-        margin-block: 5px;
+        border-radius: 7px;
+        margin-block: 4px;
         display: block;
         width: 100%;
     }
-    .modal-parent{
-        padding-right: 5px;
-    }
+
+    .modal-parent { padding-right: 5px; }
 }

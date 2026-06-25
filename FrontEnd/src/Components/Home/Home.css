@@ -1,0 +1,113 @@
+.home-wrapper {
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.home-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+/* Stats Row */
+.home-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.home-stat-card {
+    background-color: var(--surface);
+    border-radius: 16px;
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.home-stat-card:hover {
+    transform: translateY(-3px);
+}
+
+.home-stat-icon { font-size: 2rem; line-height: 1; }
+
+.home-stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.home-stat-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+/* Charts */
+.home-charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.home-chart-card--wide { grid-column: 1 / -1; }
+
+.home-chart-card {
+    background-color: var(--surface);
+    border-radius: 20px;
+    padding: 24px 20px 16px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: background-color 0.3s;
+}
+
+.home-chart-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+/* Tooltip */
+.home-tooltip {
+    background-color: var(--surface-3);
+    border-radius: 10px;
+    padding: 10px 16px;
+    direction: rtl;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+}
+
+.home-tooltip-label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+.home-tooltip-value {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .home-stats-row { grid-template-columns: repeat(2, 1fr); }
+    .home-charts-grid { grid-template-columns: 1fr; }
+    .home-chart-card--wide { grid-column: 1; }
+}
+
+@media (max-width: 426px) {
+    .home-wrapper { margin-top: 80px; padding: 10px; }
+    .home-title { font-size: 1.5rem; }
+    .home-stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .home-stat-card { padding: 14px 12px; gap: 10px; border-radius: 12px; }
+    .home-stat-icon { font-size: 1.5rem; }
+    .home-stat-value { font-size: 1.3rem; }
+    .home-chart-card { padding: 16px 12px 10px; border-radius: 14px; }
+    .home-charts-grid { gap: 14px; }
+}
