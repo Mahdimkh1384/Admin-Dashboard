@@ -224,7 +224,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 16vh;
 }
 
 .mobile-top-section {
@@ -310,6 +309,7 @@
 }
 
 .mobile-search-box-container {
+    margin-top: 5px;
     width: 100%;
     position: relative;
 }
