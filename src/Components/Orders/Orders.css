@@ -1,0 +1,17 @@
+.order-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.order-status--active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.order-status--inactive {
+    background-color: #fff3cd;
+    color: #856404;
+}

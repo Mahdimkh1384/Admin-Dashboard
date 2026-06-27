@@ -1,0 +1,43 @@
+.delete-modal {
+    background-color: var(--surface);
+    padding: 40px 50px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.delete-modal h1 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+}
+
+.delete-modal-btns {
+    display: flex;
+    column-gap: 16px;
+}
+
+.delete-btn {
+    width: 100%;
+    margin-top: 28px;
+    font-size: 1.2rem;
+    padding: 16px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: Lalezar;
+    transition: opacity 0.2s;
+}
+
+.delete-btn:hover { opacity: 0.87; }
+
+.delete-modal-accept-btn {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.delete-modal-cancel-btn {
+    background-color: var(--surface-2);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}

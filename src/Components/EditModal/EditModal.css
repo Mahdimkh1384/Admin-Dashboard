@@ -1,0 +1,30 @@
+.edit-modal-form {
+    width: 400px;
+    padding: 30px;
+    background-color: var(--surface);
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.edit-modal-form h1 {
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.edit-form-submit {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: Lalezar;
+    transition: opacity 0.2s;
+}
+
+.edit-form-submit:hover { opacity: 0.88; }
